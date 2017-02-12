@@ -1,8 +1,14 @@
-﻿
+﻿@model List<fire_js.Models.FireExperiment>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
+
+@foreach (fire_js.Models.FireExperiment item in Model)
+{
+    @Html.ActionLink(String.Concat("Experiment ",item.id) , "Details", new { id = item.id })
+}
 
