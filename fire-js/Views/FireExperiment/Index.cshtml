@@ -7,8 +7,13 @@
 
 <h2>Index</h2>
 
+<ul>
+
 @foreach (fire_js.Models.FireExperiment item in Model)
 {
-    @Html.ActionLink(String.Concat("Experiment ",item.id) , "Details", new { id = item.id })
+    <li>
+        @Html.ActionLink(String.Concat("Experiment ", item.id), "Details", new { id = item.id })
+    </li>
 }
 
+</ul>
