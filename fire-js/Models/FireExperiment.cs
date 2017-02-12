@@ -7,8 +7,8 @@ namespace fire_js.Models
 {
     public class FireExperiment
     {
-        public int id = 0;
-        public String scriptname = "~/Scripts/...";
+        public int Id = 0;
+        public String Scriptname = "~/Scripts/...";
 
     }
 }

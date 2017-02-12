@@ -15,7 +15,8 @@ namespace fire_js
             for (int i = 1; i <= 5; i++)
             {
                 Models.FireExperiment fireExperiment = new Models.FireExperiment();
-                fireExperiment.id = i;
+                fireExperiment.Id = i;
+                fireExperiment.Scriptname = "~/Scripts/FireExperiment1.js";
                 fireExperimentList.Add(fireExperiment);
             }
 

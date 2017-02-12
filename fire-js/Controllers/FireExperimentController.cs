@@ -23,10 +23,10 @@ namespace fire_js.Controllers
             // TODO will need to firm up existence before getting singular result, exception will occur.
             Models.FireExperiment result = 
                 m_fireExperimentList.Where(
-                fireExperiment => fireExperiment.id.Equals(id)
+                fireExperiment => fireExperiment.Id.Equals(id)
                 ).FirstOrDefault();
 
-            return View(new Models.FireExperiment() { id = id });
+            return View(new Models.FireExperiment() { Id = id });
         }
     }
 }
