@@ -1,4 +1,8 @@
-﻿var createScene = function () {
+﻿
+
+
+
+var createScene = function () {
 
     // This creates a basic Babylon Scene object (non-mesh)
     var scene = new BABYLON.Scene(engine);
@@ -30,3 +34,16 @@
     return scene;
 
 };
+
+var canvas = $("#renderCanvas").get(0)
+var engine = new BABYLON.Engine(canvas, true);
+var scene = createScene();
+
+engine.runRenderLoop(function () {
+    scene.render();
+});
+
+// Resize
+window.addEventListener("resize", function () {
+    engine.resize();
+});
