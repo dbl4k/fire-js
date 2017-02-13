@@ -16,7 +16,7 @@ namespace fire_js
             {
                 Models.FireExperiment fireExperiment = new Models.FireExperiment();
                 fireExperiment.Id = i;
-                fireExperiment.Scriptname = "~/Scripts/FireExperiment1.js";
+                fireExperiment.Scriptname = "/Scripts/fire/experiment" + i.ToString() + ".js";
                 fireExperimentList.Add(fireExperiment);
             }
 

@@ -26,7 +26,7 @@ namespace fire_js.Controllers
                 fireExperiment => fireExperiment.Id.Equals(id)
                 ).FirstOrDefault();
 
-            return View(new Models.FireExperiment() { Id = id });
+            return View(result);
         }
     }
 }
