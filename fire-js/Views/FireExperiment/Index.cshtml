@@ -12,7 +12,7 @@
 @foreach (fire_js.Models.FireExperiment item in Model)
 {
     <li>
-        @Html.ActionLink(String.Concat("Experiment ", item.id), "Details", new { id = item.id })
+        @Html.ActionLink(String.Concat("Experiment ", item.Id), "Details", new { id = item.Id })
     </li>
 }
 
