@@ -31,6 +31,24 @@ var createScene = function () {
     // Our built-in 'ground' shape. Params: name, width, depth, subdivs, scene
     var ground = BABYLON.Mesh.CreateGround("ground1", 6, 6, 2, scene);
 
+    // Messing around with some arbitrary rhubarb.
+    var particleSystem = new BABYLON.ParticleSystem("particles", 2000, scene, null);
+    particleSystem.particleTexture = new BABYLON.Texture("/Content/Images/O.png", scene);
+    particleSystem.emitter = sphere;
+    particleSystem.minEmitBox = new BABYLON.Vector3(-1, 0, 0); // Starting all From
+    particleSystem.maxEmitBox = new BABYLON.Vector3(1, 0, 0); // To...
+    particleSystem.minSize = 0.1;
+    particleSystem.maxSize = 0.5;
+    particleSystem.minLifeTime = 0.3;
+    particleSystem.maxLifeTime = 1.5;
+    particleSystem.emitRate = 1000;
+    particleSystem.direction1 = new BABYLON.Vector3(-7, 8, 3);
+    particleSystem.direction2 = new BABYLON.Vector3(7, 8, -3);
+    particleSystem.minAngularSpeed = 0;
+    particleSystem.maxAngularSpeed = Math.PI;
+    particleSystem.start();
+
+
     return scene;
 
 };
